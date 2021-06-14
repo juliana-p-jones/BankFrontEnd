@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+nav {
+  background-color: #3f51b5;
+}
+
+.logo-container{
+  float: left;
+}
+
+img {
+  width: 50px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+  float: left;
+  color: white;
+  -webkit-text-fill-color: white;
+}
+
+.logo-name {
+  float: right;
+  font-size: 25px;
+  margin-left: -15px;
+  font-family: 'Staatliches', cursivive;
+  color: white;
+}
+.tagline {
+  color: white;
+ text-align: left;
+  /*width: 100%;*/
+  margin-top: 90px;
+}
+
+.banner-text{
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-family: 'Staatliches', cursivive;
+}
+
