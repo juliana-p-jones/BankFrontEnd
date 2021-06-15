@@ -7,29 +7,22 @@
       <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
+            <mat-form-field class="name-field">
+              <input matInput id="name-input" placeholder="Enter full name"  name="fullname" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
             <mat-form-field class="email-field">
               <input matInput id="email-input" placeholder="Enter email" [(ngModel)]="username" name="username" required>
             </mat-form-field>
           </td>
         </tr>
         <tr>
-          <td>
-            <mat-form-field class="phone-field">
-              <input matInput id="phone-input" placeholder="Enter phone number" name="phone" required>
-            </mat-form-field>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <mat-form-field class="name-field">
-              <input matInput id="name-input" placeholder="Enter Full Name"  name="fullname" required>
-            </mat-form-field>
-          </td>
-        </tr>
-        <tr>
           <td><mat-form-field appearance="fill">
             <mat-label>Enter your password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
+            <input matInput [type]="hide ? 'password' : 'text'" required>
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
@@ -43,6 +36,22 @@
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
           </mat-form-field></td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="street-field">
+              <input matInput id="street-input" placeholder="Address" name="address" required>
+            </mat-form-field>
+            <mat-form-field class="city-field">
+              <input matInput id="city-input" placeholder="City" name="city" required>
+            </mat-form-field>
+            <mat-form-field class="state-field">
+              <input matInput id="state-input" placeholder="State/Province/Region" name="state/province/region" required>
+            </mat-form-field>
+            <mat-form-field class="zip-field">
+              <input matInput id="zip-input" placeholder="Zip/Postal Code" name="zip/postal code" required>
+            </mat-form-field>
+          </td>
         </tr>
       </table>
     </form>
