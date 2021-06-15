@@ -1,0 +1,75 @@
+#customername{
+    float: right;
+    margin-right: 5%;
+}
+
+#accounttypes{
+    margin-left: 5%;
+    text-decoration: underline;
+}
+
+#customername, #accounttypes{
+    display: inline-block;
+    margin-top: 1%;
+}
+
+#details{
+    border: 1px solid #3f51b5;
+}
+
+#accountstable{
+    margin-left: 5%;
+}
+
+#checkingname{
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    border: .1px solid white;
+}
+
+
+#savingsname{
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    margin-top: 10%;
+    border: .1px solid white;
+}
+
+#checkingtotal{
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    border: .1px solid white;
+}
+
+#savingstotal{
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    border: .1px solid white;
+}
+
+#total{
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+    border: .1px solid white;
+}
+
+#totaloverall{
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+    border: .1px solid white;
+}
+
+#createaccountbutton{
+    margin-top: 25px;
+    margin-left: 5%;
+    margin-bottom: 25px;
+}
+
