@@ -1,0 +1,9 @@
+.container{
+display: flex;
+align-content:center;
+margin-top: 10%;
+background-color: rgba(174, 174, 174, 0.171);
+}
+#body{
+font-size: x-small;
+}

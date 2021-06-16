@@ -1,0 +1,52 @@
+<div class=container>
+    <div class="row">
+    <div id="form"class="col-7">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Create a New Account</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <form class="example-form">
+                <table class="example-full-width" cellspacing="0">
+                  <tr>
+                    <td>
+                      <mat-form-field class="Account Type" appearance="fill">
+                          <mat-label>Type of Account:</mat-label>
+                          <select matNativeControl required>
+                            <option value="Checking">Checking</option>
+                            <option value="Savings">Savings</option>
+                          </select>
+                        </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <mat-form-field class="Account Name">
+                        <input matInput id="nickname-input" placeholder="Enter Account Name" [(ngModel)]="nickname" name="nickname" required>
+                      </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>$ 
+                      <mat-form-field class="Balance">
+                        <input matInput id="balance-input" type="number" min=0.01 oninput="this.value = Math.abs(this.value)" step='0.01' value='0.00' placeholder='0.00' placeholder="Enter initial balance"  name="balance" required>  
+                    </mat-form-field>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button  color="primary" class="createaccount" routerLink="/app-login-form">Create Account</button>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+    <div id="text" class="col-5">
+        <h3><i>Create a new Savings or Checking Account with Hanover Banking <br>in Minutes, Today!</i></h3>
+    </div>
+</div>
+</div>
+
+  
+  
+  
