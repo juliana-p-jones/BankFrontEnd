@@ -1,0 +1,23 @@
+<div id="details">
+    
+<h3 id="accounttypes">CHECKING/SAVINGS</h3> <h3 *ngFor="let customer of customers" id="customername">WELCOME, {{customer.name}}</h3>
+   
+<table id="accountstable" style="width: 50%">
+
+<tbody>
+    <tr *ngFor="let account of accounts">
+      <td id="checkingname">{{account.type}}: {{account.nickname}}</td>
+      <td id="checkingtotal">Total: {{account.balance | currency}}</td> 
+    </tr>
+
+    <tr id="totalrow">
+        <td id="total">TOTAL</td>
+        <td id="totaloverall">Total Overall: {{totalaccounts()}}</td> 
+    </tr>
+    </tbody>
+
+  </table>
+<div>
+    <button id="createaccountbutton" mat-raised-button color="primary">CREATE NEW ACCOUNT</button>
+</div>
+</div> 

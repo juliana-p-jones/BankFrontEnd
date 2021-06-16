@@ -16,6 +16,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { FooterComponent } from './footer/footer.component';
     LoginFormComponent,
     NavBarComponent,
     SignUpComponent,
-    FooterComponent
+    FooterComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'app-login-form', component: LoginFormComponent},
       {path: 'app-sign-up', component: SignUpComponent},
+      {path: 'app-welcome', component: WelcomeComponent},
       {path: '', redirectTo: '/app-sign-up', pathMatch: 'full'},
     ]),
     AppRoutingModule,
@@ -41,7 +45,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
