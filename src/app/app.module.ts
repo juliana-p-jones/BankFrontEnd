@@ -16,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

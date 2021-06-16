@@ -3,32 +3,32 @@
     <mat-card-title>Sign Up</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form class="example-form">
+    <form class="example-form" (ngSubmit)="signupButton()">
       <table class="example-full-width" cellspacing="0">
         <tr>
           <td>
             <mat-form-field class="name-field">
-              <input matInput id="name-input" placeholder="Enter full name"  name="fullname" required>
+              <input matInput id="name-input" placeholder="Enter full name"  required [(ngModel)]="customer.name" name="name">
             </mat-form-field>
           </td>
         </tr>
         <tr>
           <td>
             <mat-form-field class="email-field">
-              <input matInput id="email-input" placeholder="Enter email" [(ngModel)]="username" name="username" required>
+              <input matInput id="email-input" placeholder="Enter email" required [(ngModel)]="customer.email" name="email">
             </mat-form-field>
           </td>
         </tr>
         <tr>
           <td><mat-form-field appearance="fill">
             <mat-label>Enter your password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'" required>
+            <input matInput [type]="hide ? 'password' : 'text'" required [(ngModel)]="customer.password" name="password">
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
           </mat-form-field></td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td><mat-form-field appearance="fill">
             <mat-label>Confirm your password</mat-label>
             <input matInput [type]="hide ? 'password' : 'text'">
@@ -36,11 +36,11 @@
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
           </mat-form-field></td>
-        </tr>
+        </tr> -->
         <tr>
           <td>
             <mat-form-field class="street-field">
-              <input matInput id="street-input" placeholder="Address" name="address" required>
+              <input matInput id="street-input" placeholder="Address" name="address" required [(ngModel)]="customer.addressSet" name="addressSet">
             </mat-form-field>
             <mat-form-field class="city-field">
               <input matInput id="city-input" placeholder="City" name="city" required>
@@ -54,11 +54,10 @@
           </td>
         </tr>
       </table>
+      <button type="submit" mat-raised-button  color="primary" class="signup" routerLink="/app-login-form">Sign Up</button>
     </form>
   </mat-card-content>
   <mat-card-actions>
-
-    <button mat-raised-button  color="primary" class="signup" routerLink="/app-login-form">Sign Up</button>
   </mat-card-actions>
 </mat-card>
 
