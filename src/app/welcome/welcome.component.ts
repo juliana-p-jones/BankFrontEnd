@@ -12,43 +12,46 @@ import { CustomerServiceService } from '../customer-service.service';
 })
 export class WelcomeComponent implements OnInit {
 
-accounts: Account[]
+accounts: Account[];
 
-customers: Customer[]
+customers: Customer[];
 
-  constructor(private accountdata:AccountServiceService, private customerdata:CustomerServiceService, private router:Router) { }
+  constructor(private accountdata: AccountServiceService, private customerdata: CustomerServiceService, private router: Router) { }
 
   ngOnInit(): void {
-    
+
     this.getAllAccounts();
     this.getAllCustomers();
     this.totalaccounts();
   }
 
+  // tslint:disable-next-line:typedef
   getAllAccounts(){
     this.accountdata.fetchAllAccounts().subscribe(
       response => {
-        this.accounts = response
+        this.accounts = response;
       }
-    )
+    );
   }
 
+  // tslint:disable-next-line:typedef
   totalaccounts(){
-    
-    var total = 0
+
+    const total = 0;
     this.accounts.forEach(account => {
-    account.balance += total
+    account.balance += total;
     });
-    return total  
+    return total;
     }
-    
+
+  // tslint:disable-next-line:typedef
   getAllCustomers(){
     this.customerdata.fetchAllCustomers().subscribe(
       response => {
-        this.customers = response
+        this.customers = response;
       }
-    )
+    );
   }
-}  
-  
+}
+
 

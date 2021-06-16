@@ -1,0 +1,46 @@
+<p>account-details works!</p>
+
+<div id="details">
+  <h3 id="accounttypes">ACCOUNT DETAILS</h3>
+
+  <table id=detailstable">
+  <tbody>
+
+  <tr *ngFor="let account of accounts">
+    <td id="nickname">{{account.nickname}}</td>
+  </tr>
+  <tr id="totalInChecking" *ngFor="let account of accounts" >
+    <td>
+      Total: {{account.balance | currency}}
+    </td>
+  </tr>
+  </tbody>
+  </table>
+  <br>
+  <br>
+  <br>
+
+  <table>
+  <tbody id="transactionHistory" >
+  <tr>Transactions History:</tr>
+  <tr *ngFor="let withdrawal of withdrawals">
+    <td>Withdraw(-)</td>
+    <td>Transaction Date: {{withdrawal.transactionDate | date}}  | Amount: {{withdrawal.amount}}</td>
+  </tr>
+  <tr>Deposit(+)</tr>
+  <tr  *ngFor="let deposit of deposits">
+  <td>Transaction Date: {{deposit.transactionDate | date}}  | Amount: {{deposit.amount}}</td>
+  </tr>
+
+  <tr>Balance</tr>
+
+
+  </tbody>
+  </table>
+
+<div>
+
+</div>
+
+</div>
+

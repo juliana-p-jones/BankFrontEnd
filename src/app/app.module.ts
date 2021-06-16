@@ -18,6 +18,7 @@ import {RouterModule} from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     SignUpComponent,
     FooterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AccountDetailsComponent
   ],
   imports: [
     BrowserModule,

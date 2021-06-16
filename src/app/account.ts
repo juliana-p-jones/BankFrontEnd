@@ -4,5 +4,5 @@ export class Account{
     customerId: number;
     nickname: string;
     type: string;
-    accountId: number ;
+    accountId: number;
 }
