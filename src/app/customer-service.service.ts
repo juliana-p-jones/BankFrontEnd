@@ -28,4 +28,8 @@ export class CustomerServiceService {
     return this.http.get<Customer[]>(`http://localhost:8080/api/v1/customer/`);
   }
 
+  fetchAllCustomers(): Observable<Customer[]>{
+    return this.http.get<Customer[]>(`http://localhost:8080/api/v1/customer`)
+  }
+
 }
