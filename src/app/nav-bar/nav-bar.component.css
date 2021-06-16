@@ -1,13 +1,15 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-
+ /* @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap'); */
+ *{
+  clear:both;
+  max-width: 100%;  
+}
 .container {
-  display:flex;
   background-color: #3f51b5;
   color: white;
   font-family: 'Staatliches', cursivive;
-  justify-content: center;
-  padding-left:-50%;
   width: 100%;
+  padding-top: 7%;
+  /* padding-bottom: 5%; */
 
   
 }
@@ -23,7 +25,7 @@ img {
   top:0px;
   left:0px; 
   left:0px; 
-  width: 100%; 
+  width: 100%;  */
 }
 
 .logo-name {
@@ -43,22 +45,42 @@ img {
   align-content: center;
   text-align: center;
 }
-#banner-text .h1{
-  font-size: 25px !important;
+#banner-text, .h1{
+  clear: both;
+  font-size: xx-large !important;
 }
 #hamburger{
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  clear: both;
+  width: 45px;
+  height: 45px;
+  align-items:baseline;
+  top:10px;
+
 }
-nav.navbar{
-  background-color: #3f51b5;
-  color: white;
-  font-family: 'Staatliches', cursivive;
+.col-2 #hamburger{
+
+}
+#menubox{
+  float: right;
+  padding-right: 10%;
+  align-content:space-around;
+  display: grid;
+}
+#nav{
+  border: 2px solid white;
+  border-radius: 5px;
   display: flex;
-  padding-top: 8%;
-  padding-bottom: 3%;
+  align-content: center;
+  margin-right: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 15%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container[_ngcontent-bpa-c16]{
-  display:none!important;
+#bottom{
+  padding-bottom: 1%;
 }
-/*
+

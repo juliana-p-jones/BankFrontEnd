@@ -11,7 +11,7 @@ export class CustomerServiceService {
   constructor(private http: HttpClient) { }
 /// add a customer to database
   // tslint:disable-next-line:typedef
-  addCustomer(customer: Customer): Observable<Customer>{
+  addCustomer(customer: Customer){
     return this.http.post<Customer>('`http://localhost:8080/api/v1/customer', customer);
   }
   deleteCustomer(id: number): Observable<Customer>{
