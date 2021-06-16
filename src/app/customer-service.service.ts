@@ -12,7 +12,7 @@ export class CustomerServiceService {
 /// add a customer to database
   // tslint:disable-next-line:typedef
   addCustomer(customer: Customer): Observable<Customer>{
-    return this.http.post<Customer>('`http://localhost:8080/api/v1/customer/', customer);
+    return this.http.post<Customer>('`http://localhost:8080/api/v1/customer', customer);
   }
   deleteCustomer(id: number): Observable<Customer>{
     return this.http.delete<any>(`http://localhost:8080/api/v1/customer/${id}`);
@@ -24,9 +24,8 @@ export class CustomerServiceService {
     return this.http.get<Customer>(`http://localhost:8080/api/v1/customer/${id}`);
   }
 
-  logOn(email: string, password: string): Observable<Customer>{
-    return this.http.get<Customer>(`http://localhost:8080/api/v1/customer/`)
-
+  fetchAllCustomers(): Observable<Customer[]>{
+    return this.http.get<Customer[]>(``)
   }
 
 }
